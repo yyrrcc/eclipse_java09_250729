@@ -6,22 +6,12 @@ public class Ex1 {
 		String str = "abcabcabc";
 
 		int count = 0;
-		for (int i = 0; i < str.length(); i++) {
-			if (str.charAt(i) == 'a') {
+		for (int i = 0; i < str.length() - 1; i++) {
+			if (str.substring(i, i + 2).equals("ab")) {
 				count++;
 			}
 		}
-		System.out.println(count);
-		System.out.println(str.indexOf("ab"));
-
-// i + 2 의 값을 담을 수 없음
-//		int count = 0;
-//		for (int i = 0; i < str.length(); i++) {
-//			if (str.substring(i, i + 2).equals("ab")) {
-//				count++;
-//			}
-//		}
-//		System.out.println("다음 문자열에서 'ab'는 " + count + "번 나옵니다.");
+		System.out.println("다음 문자열에서 'ab'는 " + count + "번 나옵니다.");
 	}
 
 }
