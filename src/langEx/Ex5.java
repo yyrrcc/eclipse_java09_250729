@@ -4,6 +4,7 @@ public class Ex5 {
 // 다음 문자열에서 알파벳의 개수를 출력하는 프로그램을 작성하시오. (hint : 아스키 코드값 활용)
 // "Hello123, Java456"
 // 아스키 코드 : 대문자a65 대문자z90 소문자a097 소문자z122
+// 꼭 아스키 코드 말고 c >= 'A' 라고 적어도 된다
 
 	public static void main(String[] args) {
 		String str = "Hello123, Java456";

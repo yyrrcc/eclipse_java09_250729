@@ -17,13 +17,30 @@ public class Ex4 {
 		}
 		System.out.println(); // 줄바꿈용
 
-		// 2. 문자열 대체 (하드 코딩)
+		// 2. 이전 문자가 공백이면 대문자로 전환 (추천)
+		String result = ""; // 결과 문자열을 담을 빈 문자열 초기화
+
+		for (int i = 0; i < str.length(); i++) {
+			char ch = str.charAt(i);
+
+			// 첫 글자거나 (i == 0), 이전 문자가 공백이면 대문자로 변환
+			if (i == 0 || str.charAt(i - 1) == ' ') {
+				// 대문자로 변환 후 더함
+				result += Character.toUpperCase(ch);
+			} else {
+				// 아니면 그대로 더함
+				result += ch;
+			}
+		}
+		System.out.println(result);
+
+		// 3. 문자열 대체 (하드 코딩)
 		str = str.replace("i ", "I ");
 		str = str.replace(" l", " L");
 		str = str.replace(" c", " C");
 		System.out.println(str);
 
-		// 3. 인덱스 찾아서 변경 -> 따로 합치지 못했음
+		// 4. 인덱스 찾아서 변경 -> 따로 합치지 못했음
 //		char firstL = str.charAt(0);
 //		char SecondL = str.charAt(2);
 //		char ThirdL = str.charAt(7);

@@ -10,11 +10,18 @@ public class Ex2 {
 			System.out.println(string);
 		}
 
-		// 2. 단순하게 구간 추출하기 (하드 코딩)
-		String id = str.substring(0, 5);
-		String domain = str.substring(6, 15);
-		System.out.println(id);
-		System.out.println(domain);
+		// 2. indexOf(), substring() 사용
+		int atIndex = str.indexOf('@'); // @의 위치 찾기
+		String id = str.substring(0, atIndex); // 0부터 @ 직전까지(id)
+		String domain = str.substring(atIndex + 1); // @ 다음부터 끝까지(domain)
+		System.out.println("아이디: " + id);
+		System.out.println("도메인: " + domain);
+
+		// 3. 단순하게 구간 추출하기 (하드 코딩)
+//		String id = str.substring(0, 5);
+//		String domain = str.substring(6, 15);
+//		System.out.println(id);
+//		System.out.println(domain);
 
 	}
 
